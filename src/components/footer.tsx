@@ -49,7 +49,7 @@ const Footer = () => {
 				</div>
 				<div>
 					<Button
-						variant={"outline"}
+						variant={"outlineSecondary"}
 						size={"sm"}
 					>
 						Back to top
