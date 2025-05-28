@@ -2,6 +2,7 @@ import Footer from "@/components/footer";
 import Hero from "@/components/hero";
 import Mission from "@/components/mission";
 import Navbar from "@/components/navbar";
+import Projects from "@/components/projects";
 import React from "react";
 
 const home = () => {
@@ -14,6 +15,7 @@ const home = () => {
 				</div>
 			</header>
 			<Mission />
+			<Projects />
 			<Footer />
 		</div>
 	);
