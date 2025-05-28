@@ -18,8 +18,8 @@ const CtaWrapper = () => {
 				<div className="absolute right-6 top-1/2 -translate-y-1/2 size-4 rounded-full bg-foreground transition-transform duration-500 ease-in-out group-hover:scale-[15]"></div>
 			</Button>
 			<Button
-				size={"tertiary"}
 				variant={"tertiary"}
+				size={"tertiary"}
 			>
 				<Copy />
 				hello@sadhug.in
