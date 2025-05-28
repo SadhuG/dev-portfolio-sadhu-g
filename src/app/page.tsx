@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Hero from "@/components/hero";
 import Mission from "@/components/mission";
 import Navbar from "@/components/navbar";
@@ -13,6 +14,7 @@ const home = () => {
 				</div>
 			</header>
 			<Mission />
+			<Footer />
 		</div>
 	);
 };
