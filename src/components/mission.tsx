@@ -52,7 +52,7 @@ const Mission = () => {
 						className="max-w-96 p-8 w-full gap-8"
 					>
 						<CardTitle>
-							<h4>{card.title}</h4>
+							<h3>{card.title}</h3>
 						</CardTitle>
 						<CardContent>
 							<ul>

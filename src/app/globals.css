@@ -91,7 +91,8 @@
 	h2 {
 		@apply text-6xl font-medium tracking-[1px] leading-[120%];
 	}
-	h4 {
+	/* h3 style skipped to lighten the typography and h3 classes are h4 in design */
+	h3 {
 		@apply text-[40px] font-medium tracking-[1px] leading-[120%];
 	}
 }
