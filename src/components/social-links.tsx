@@ -11,11 +11,12 @@ const SocialLinks = () => {
 		{ text: "GitHub", icon: githubLogo, href: "#" },
 	];
 	return (
-		<div className="flex gap-4 opacity-80">
+		<div className="flex gap-4">
 			{socialLinks.map((item, index) => (
 				<Link
 					key={index}
 					href={item.href}
+					className="opacity-80 hover:opacity-100 transition-opacity duration-150 "
 				>
 					<Image
 						src={item.icon}
