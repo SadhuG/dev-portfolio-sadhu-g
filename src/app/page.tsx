@@ -1,4 +1,5 @@
 import Hero from "@/components/hero";
+import Mission from "@/components/mission";
 import Navbar from "@/components/navbar";
 import React from "react";
 
@@ -11,6 +12,7 @@ const home = () => {
 					<Hero />
 				</div>
 			</header>
+			<Mission />
 		</div>
 	);
 };
