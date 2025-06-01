@@ -88,10 +88,10 @@
 		@apply px-5 py-16 sm:px-8 sm:py-16 md:px-12 md:py-16 lg:px-14 lg:py-24 xl:px-16 xl:py-28;
 	}
 	h1 {
-		@apply text-[84px] font-medium tracking-[1px] leading-[110%];
+		@apply text-[40px] sm:text-[84px] font-medium tracking-[1px] leading-[110%];
 	}
 	h2 {
-		@apply text-6xl font-medium tracking-[1px] leading-[120%];
+		@apply text-4xl sm:text-6xl font-medium tracking-[1px] leading-[120%];
 	}
 	/* h3 style skipped to lighten the typography and h3 classes are h4 in design */
 	h3 {
@@ -101,4 +101,8 @@
 
 .tagline {
 	@apply tracking-[0.5em] font-semibold leading-[150%] uppercase;
+}
+
+.text-large-normal {
+	@apply text-lg sm:text-[26px] leading-[160%];
 }
