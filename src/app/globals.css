@@ -95,7 +95,7 @@
 	}
 	/* h3 style skipped to lighten the typography and h3 classes are h4 in design */
 	h3 {
-		@apply text-[40px] font-medium tracking-[1px] leading-[120%];
+		@apply text-[32px] sm:text-[40px] font-medium tracking-[1px] leading-[120%];
 	}
 }
 
@@ -105,4 +105,10 @@
 
 .text-large-normal {
 	@apply text-lg sm:text-[26px] leading-[160%];
+}
+.text-medium-normal {
+	@apply text-lg sm:text-xl leading-[160%];
+}
+.text-regular-normal {
+	@apply text-base sm:text-lg leading-[160%];
 }

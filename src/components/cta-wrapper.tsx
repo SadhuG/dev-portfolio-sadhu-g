@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 const CtaWrapper = () => {
 	return (
-		<div className="flex flex-col gap-6">
+		<div className="flex flex-col sm:flex-row gap-6">
 			<div>
 				<Button
 					variant={"outline"}
