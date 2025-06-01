@@ -12,8 +12,8 @@ const Navbar = () => {
 		{ text: "About", href: "#" },
 	];
 	return (
-		<nav className="h-[72px]">
-			<div className="flex items-center justify-between ">
+		<nav className="h-[72px] pl-5 pr-3 sm:px-12 lg:px-14 xl:px-16 flex items-center-safe justify-center-safe">
+			<div className="flex items-center justify-between w-full">
 				<div>
 					<Image
 						src={logo}

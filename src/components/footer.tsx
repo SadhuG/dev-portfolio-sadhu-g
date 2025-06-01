@@ -14,7 +14,7 @@ const Footer = () => {
 	];
 
 	return (
-		<footer>
+		<footer className="px-5 py-12 sm:p-16 lg:px-16 lg:py-20">
 			<div className="flex justify-between">
 				<div>
 					<span className="text-lg">© Sudhansh Singh 2025.</span>
