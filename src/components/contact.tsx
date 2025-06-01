@@ -4,36 +4,36 @@ import React from "react";
 import CtaWrapper from "./cta-wrapper";
 
 const Contact = () => {
-	return (
-		<section>
-			<div className="flex justify-between">
-				<div>
-					<p className="tagline mb-4">connect</p>
-					<h2>
-						Have a Vision?
-						<br />
-						<span className="font-accent">Let’s make it happen</span>
-					</h2>
-					<p className="text-[26px] font-light leading-[160%] mt-6">
-						Big or small, every great idea starts with a conversation.
-					</p>
-					<div className="mt-8">
-						<CtaWrapper />
-					</div>
-					<p className="text-[26px] font-semibold leading-[160%] mt-6">
-						Available for fulltime roles and freelance projects{" "}
-					</p>
-				</div>
-				<div className="w-full max-w-[515px] h-full max-h-[515px] flex items-center justify-center">
-					<Image
-						src={absStar}
-						alt={"abstract star image"}
-						className="w-full h-full max-w-[350px] max-h-[373px] rounded-3xl object-cover"
-					/>
-				</div>
-			</div>
-		</section>
-	);
+  return (
+    <section>
+      <div className="flex flex-col gap-12 xl:flex-row xl:gap-20">
+        <div>
+          <p className="tagline mb-4">connect</p>
+          <h2>
+            Have a Vision?
+            <br />
+            <span className="font-accent">Let’s make it happen</span>
+          </h2>
+          <p className="mt-4 text-[26px] leading-[160%] font-light">
+            Big or small, every great idea starts with a conversation.
+          </p>
+          <div className="mt-8">
+            <CtaWrapper />
+          </div>
+          <p className="text-large-semibold mt-8">
+            Available for fulltime roles and freelance projects{" "}
+          </p>
+        </div>
+        <div className="flex h-full max-h-[515px] w-full max-w-[515px] items-center justify-center sm:mx-auto">
+          <Image
+            src={absStar}
+            alt={"abstract star image"}
+            className="h-full max-h-[373px] w-full max-w-[350px] rounded-3xl object-cover"
+          />
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Contact;
