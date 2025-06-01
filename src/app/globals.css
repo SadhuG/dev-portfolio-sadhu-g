@@ -112,3 +112,6 @@
 .text-regular-normal {
 	@apply text-base sm:text-lg leading-[160%];
 }
+.text-regular-light {
+	@apply text-base sm:text-lg leading-[160%] font-light;
+}

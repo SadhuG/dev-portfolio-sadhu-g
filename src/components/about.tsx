@@ -6,14 +6,14 @@ import SocialLinks from "./social-links";
 const About = () => {
 	return (
 		<section>
-			<div className="flex">
-				<div>
+			<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:grid-cols-[1fr_450px] xl:gap-20">
+				<div className="h-full">
 					<p className="tagline mb-4">About me</p>
 					<h2>
 						Frontend Developer into{" "}
 						<span className="font-accent">everything</span>
 					</h2>
-					<p className="text-xl leading-[160%] mt-6">
+					<p className="text-regular-normal mt-6">
 						I'm Sudhansh a tinkerer turned builder. Currently building frontend
 						(secretly full-stack) experiences that are a treat to use. I enjoy
 						turning complex ideas into clean, lovely interfaces making web
@@ -30,13 +30,15 @@ const About = () => {
 						<SocialLinks />
 					</div>
 				</div>
-				<div className="w-full max-w-[450px] h-full max-h-[480px]">
-					<Image
-						src={devImage}
-						alt={"developer image"}
-						className="w-full h-auto rounded-3xl object-cover"
-					/>
-					<div className="flex p-6">
+				<div className="h-full w-full mx-auto flex flex-col">
+					<div className="flex-1 w-full max-w-[450px] h-full max-h-[480px]">
+						<Image
+							src={devImage}
+							alt={"developer image"}
+							className="w-full h-auto rounded-3xl object-cover"
+						/>
+					</div>
+					<div className="px-6 ">
 						<p>Hi, this is me but ghibli</p>
 					</div>
 				</div>
