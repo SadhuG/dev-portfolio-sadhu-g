@@ -29,7 +29,7 @@ const Contact = () => {
             <Image
               src={absStar}
               alt={"abstract star image"}
-              className="h-full max-h-[373px] w-full max-w-[350px] rounded-3xl object-cover"
+              className="h-[235px] max-h-[373px] w-[220px] max-w-[350px] rounded-3xl object-cover sm:h-full sm:w-full"
             />
           </div>
         </div>
