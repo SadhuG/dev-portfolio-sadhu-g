@@ -77,6 +77,7 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* Global Styles */
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -99,23 +100,31 @@
   }
 }
 
+/* Global text styles */
 .tagline {
   @apply leading-[150%] font-semibold tracking-[0.5em] uppercase;
 }
 
+/* large text */
+.text-large-light {
+  @apply text-lg leading-[160%] font-light sm:text-[26px];
+}
 .text-large-normal {
   @apply text-lg leading-[160%] sm:text-[26px];
 }
-
 .text-large-semibold {
   @apply text-lg leading-[160%] font-semibold sm:text-[26px];
 }
+
+/* medium text */
 .text-medium-normal {
   @apply text-lg leading-[160%] sm:text-xl;
 }
-.text-regular-normal {
-  @apply text-base leading-[160%] sm:text-lg;
-}
+
+/* regular text */
 .text-regular-light {
   @apply text-base leading-[160%] font-light sm:text-lg;
+}
+.text-regular-normal {
+  @apply text-base leading-[160%] sm:text-lg;
 }

@@ -2,49 +2,45 @@ import mailSend from "@/assets/icons/mail-send.svg";
 import logo from "@/assets/logo.png";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { use } from "react";
+import ClientMenuWrapper from "./client-menu-wrapper";
 import { Button } from "./ui/button";
 
 const Navbar = () => {
-	const navMenu = [
-		{ text: "Mission", href: "#" },
-		{ text: "Works", href: "#" },
-		{ text: "About", href: "#" },
-	];
-	return (
-		<nav className="h-[72px] pl-5 pr-3 sm:px-12 lg:px-14 xl:px-16 flex items-center-safe justify-center-safe">
-			<div className="flex items-center justify-between w-full">
-				<div>
-					<Image
-						src={logo}
-						alt={"logo"}
-					/>
-				</div>
-				<div className="flex items-center gap-8">
-					{navMenu.map((item, index) => (
-						<Link
-							key={index}
-							href={item.href}
-						>
-							{item.text}
-						</Link>
-					))}
-				</div>
-				<div>
-					<Button
-						size={"tertiary"}
-						variant={"tertiary"}
-					>
-						<Image
-							src={mailSend}
-							alt={"mail send icon"}
-						/>
-						hello@sadhug.in
-					</Button>
-				</div>
-			</div>
-		</nav>
-	);
+  const navMenu = [
+    { text: "Mission", href: "#" },
+    { text: "Works", href: "#" },
+    { text: "About", href: "#" },
+  ];
+
+  return (
+    <nav className="flex h-[72px] items-center-safe justify-center-safe pr-3 pl-5 sm:px-12 lg:px-14 xl:px-16">
+      <div className="flex w-full items-center justify-between">
+        <div className="z-60">
+          <Image src={logo} alt={"logo"} />
+          <span className="hidden">SadhuG</span>
+        </div>
+
+        {/* desktop menu */}
+        <div className="hidden lg:flex lg:items-center lg:gap-8">
+          {navMenu.map((item, index) => (
+            <Link key={index} href={item.href}>
+              {item.text}
+            </Link>
+          ))}
+        </div>
+        <div className="hidden lg:block">
+          <Button size={"tertiary"} variant={"tertiary"}>
+            <Image src={mailSend} alt={"mail send icon"} />
+            hello@sadhug.in
+          </Button>
+        </div>
+
+        {/* mobile menu */}
+        <ClientMenuWrapper />
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;
