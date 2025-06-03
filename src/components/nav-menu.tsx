@@ -38,10 +38,12 @@ const NavMenu = ({ isOpen, onClose }: Props) => {
 
         <div className="flex w-full flex-col items-end">
           <span className="text-large-light">Let’s Chat!</span>
-          <Button size={"tertiary"} variant={"tertiary"}>
-            <Image src={mailSend} alt={"mail send icon"} />
-            hello@sadhug.in
-          </Button>
+          <Link href={"mailto:hello@sadhug.in"} target="_blank">
+            <Button size={"tertiary"} variant={"tertiary"}>
+              <Image src={mailSend} alt={"mail send icon"} />
+              hello@sadhug.in
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

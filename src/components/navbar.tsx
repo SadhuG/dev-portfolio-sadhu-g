@@ -30,10 +30,12 @@ const Navbar = () => {
           ))}
         </div>
         <div className="hidden lg:block">
-          <Button size={"tertiary"} variant={"tertiary"}>
-            <Image src={mailSend} alt={"mail send icon"} />
-            hello@sadhug.in
-          </Button>
+          <Link href={"mailto:hello@sadhug.in"} target="_blank">
+            <Button size={"tertiary"} variant={"tertiary"}>
+              <Image src={mailSend} alt={"mail send icon"} />
+              hello@sadhug.in
+            </Button>
+          </Link>
         </div>
 
         {/* mobile menu */}
