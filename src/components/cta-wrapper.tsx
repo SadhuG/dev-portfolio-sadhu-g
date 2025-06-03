@@ -1,18 +1,38 @@
+import mailSend from "@/assets/icons/mail-send.svg";
+import xLogo from "@/assets/icons/x-logo.svg";
 import { ArrowUpRight, Copy } from "lucide-react";
+import Image from "next/image";
 import React from "react";
+import SocialLinks from "./social-links";
 import { Button } from "./ui/button";
 import {
   Drawer,
-  DrawerClose,
   DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
 } from "./ui/drawer";
 
 const CtaWrapper = () => {
+  const contactInfo = [
+    {
+      name: "Email",
+      icon: mailSend,
+      link: "#",
+      contactInfo: "hello@sadhug.in",
+      text: "Send me an email directly",
+      bg: "bg-linear-to-r from-[#DB94EB]/50 to-[#000000]",
+    },
+    {
+      name: "X (Twitter)",
+      icon: xLogo,
+      link: "#",
+      contactInfo: "@iamsudhug",
+      text: "Let’s have a conversation",
+      bg: "bg-linear-to-r from-[#A1C3FA]/50 to-[#000000]",
+    },
+  ];
+
   return (
     <Drawer>
       <div className="flex flex-col gap-2 sm:flex-row sm:gap-6">
@@ -39,43 +59,40 @@ const CtaWrapper = () => {
           </Button>
         </div>
       </div>
-      <DrawerContent className="mx-auto w-2xl">
-        <div className="mx-auto w-full max-w-sm">
-          <DrawerHeader>
-            <DrawerTitle>Move Goal</DrawerTitle>
-            <DrawerDescription>Set your daily activity goal.</DrawerDescription>
+      <DrawerContent className="mx-auto w-full max-w-2xl border-none px-8 pb-12">
+        <div className="mx-auto flex w-full flex-col items-center justify-center gap-6">
+          <DrawerHeader className="items-center gap-2">
+            <DrawerTitle>
+              <p className="text-xl leading-[120%] font-medium tracking-[1px] sm:text-[32px]">
+                Connect with me
+              </p>
+            </DrawerTitle>
+            <SocialLinks />
           </DrawerHeader>
-          <div className="p-4 pb-0">
-            <div className="flex items-center justify-center space-x-2">
-              <Button
-                variant="outline"
-                size="icon"
-                className="h-8 w-8 shrink-0 rounded-full"
+          <div className="flex w-full flex-col gap-6 sm:flex-row">
+            {/* contact */}
+            {contactInfo.map((item, index) => (
+              <div
+                key={index}
+                className="flex w-full flex-col overflow-hidden rounded-3xl border border-[#cccccc]"
               >
-                <span className="sr-only">Decrease</span>
-              </Button>
-              <div className="flex-1 text-center">
-                <div className="text-7xl font-bold tracking-tighter"></div>
-                <div className="text-muted-foreground text-[0.70rem] uppercase">
-                  Calories/day
+                <div
+                  className={`flex items-center gap-2 px-6 ${item.bg} pt-6 pb-4`}
+                >
+                  <Image src={item.icon} alt={item.name} className="h-6 w-6" />
+                  <p className="text-medium-medium">{item.name}</p>
+                </div>
+                <div className="h-[1px] w-full bg-[#cccccc]"></div>
+                <div className="flex flex-col gap-2 px-6 pt-4 pb-6">
+                  <p className="text-regular-medium">{item.contactInfo}</p>
+                  <p className="text-small-light">{item.text}</p>
                 </div>
               </div>
-              <Button
-                variant="outline"
-                size="icon"
-                className="h-8 w-8 shrink-0 rounded-full"
-              >
-                <span className="sr-only">Increase</span>
-              </Button>
+            ))}
+            <div>
+              <div></div>
             </div>
-            <div className="mt-3 h-[120px]"></div>
           </div>
-          <DrawerFooter>
-            <Button>Submit</Button>
-            <DrawerClose asChild>
-              <Button variant="outline">Cancel</Button>
-            </DrawerClose>
-          </DrawerFooter>
         </div>
       </DrawerContent>
     </Drawer>

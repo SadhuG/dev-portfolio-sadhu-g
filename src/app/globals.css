@@ -98,6 +98,9 @@
   h3 {
     @apply text-[32px] leading-[120%] font-medium tracking-[1px] sm:text-[40px];
   }
+  h5 {
+    @apply text-xl leading-[120%] font-medium tracking-[1px] sm:text-[32px];
+  }
 }
 
 /* Global text styles */
@@ -120,6 +123,9 @@
 .text-medium-normal {
   @apply text-lg leading-[160%] sm:text-xl;
 }
+.text-medium-medium {
+  @apply text-lg leading-[160%] font-medium sm:text-xl;
+}
 
 /* regular text */
 .text-regular-light {
@@ -127,4 +133,12 @@
 }
 .text-regular-normal {
   @apply text-base leading-[160%] sm:text-lg;
+}
+.text-regular-medium {
+  @apply text-base leading-[160%] font-medium sm:text-lg;
+}
+
+/* small text */
+.text-small-light {
+  @apply text-base leading-[160%] font-light;
 }
