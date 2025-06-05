@@ -3,6 +3,7 @@ import xLogo from "@/assets/icons/x-logo.svg";
 import { ArrowUpRight, Copy } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import CopyMailButton from "./copy-mail-button";
 import SocialLinks from "./social-links";
 import { Button } from "./ui/button";
 import {
@@ -53,10 +54,7 @@ const CtaWrapper = () => {
           </DrawerTrigger>
         </div>
         <div>
-          <Button variant={"tertiary"} size={"tertiary"}>
-            <Copy />
-            hello@sadhug.in
-          </Button>
+          <CopyMailButton />
         </div>
       </div>
       <DrawerContent className="mx-auto w-full max-w-2xl border-none px-8 pb-12">
