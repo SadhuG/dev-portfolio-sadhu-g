@@ -30,7 +30,11 @@ const Navbar = () => {
           ))}
         </div>
         <div className="hidden lg:block">
-          <Link href={"mailto:hello@sadhug.in"} target="_blank">
+          <Link
+            href={"mailto:hello@sadhug.in"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button size={"tertiary"} variant={"tertiary"}>
               <Image src={mailSend} alt={"mail send icon"} />
               hello@sadhug.in

@@ -32,7 +32,11 @@ const Footer = () => {
         </div>
         <div className="space-y-2">
           <div>
-            <Link href={"mailto:hello@sadhug.in"} target="_blank">
+            <Link
+              href={"mailto:hello@sadhug.in"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button size={"tertiary"} variant={"tertiary"}>
                 <Image src={mailSend} alt={"mail send icon"} />
                 hello@sadhug.in

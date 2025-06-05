@@ -2,6 +2,7 @@ import mailSend from "@/assets/icons/mail-send.svg";
 import xLogo from "@/assets/icons/x-logo.svg";
 import { ArrowUpRight, Copy } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import CopyMailButton from "./copy-mail-button";
 import SocialLinks from "./social-links";
@@ -19,7 +20,7 @@ const CtaWrapper = () => {
     {
       name: "Email",
       icon: mailSend,
-      link: "#",
+      link: "mailto:hello@sadhug.in",
       contactInfo: "hello@sadhug.in",
       text: "Send me an email directly",
       bg: "bg-linear-to-r from-[#DB94EB]/50 to-[#000000]",
@@ -27,7 +28,7 @@ const CtaWrapper = () => {
     {
       name: "X (Twitter)",
       icon: xLogo,
-      link: "#",
+      link: "https://x.com/iamsudhug",
       contactInfo: "@iamsudhug",
       text: "Let’s have a conversation",
       bg: "bg-linear-to-r from-[#A1C3FA]/50 to-[#000000]",
@@ -53,10 +54,12 @@ const CtaWrapper = () => {
             </Button>
           </DrawerTrigger>
         </div>
+
         <div>
           <CopyMailButton />
         </div>
       </div>
+
       <DrawerContent className="mx-auto w-full max-w-2xl border-none px-8 pb-12">
         <div className="mx-auto flex w-full flex-col items-center justify-center gap-6">
           <DrawerHeader className="items-center gap-2">
@@ -65,31 +68,40 @@ const CtaWrapper = () => {
                 Connect with me
               </p>
             </DrawerTitle>
+
             <SocialLinks />
           </DrawerHeader>
-          <div className="flex w-full flex-col gap-6 sm:flex-row">
+
+          <div className="flex w-full flex-col items-center justify-center gap-6 sm:flex-row">
             {/* contact */}
             {contactInfo.map((item, index) => (
-              <div
-                key={index}
-                className="flex w-full flex-col overflow-hidden rounded-3xl border border-[#cccccc]"
-              >
-                <div
-                  className={`flex items-center gap-2 px-6 ${item.bg} pt-6 pb-4`}
+              <div key={index} className="w-full">
+                <Link
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
                 >
-                  <Image src={item.icon} alt={item.name} className="h-6 w-6" />
-                  <p className="text-medium-medium">{item.name}</p>
-                </div>
-                <div className="h-[1px] w-full bg-[#cccccc]"></div>
-                <div className="flex flex-col gap-2 px-6 pt-4 pb-6">
-                  <p className="text-regular-medium">{item.contactInfo}</p>
-                  <p className="text-small-light">{item.text}</p>
-                </div>
+                  <div className="flex w-full flex-col overflow-hidden rounded-3xl border border-[#cccccc]">
+                    <div
+                      className={`flex items-center gap-2 px-6 ${item.bg} pt-6 pb-4`}
+                    >
+                      <Image
+                        src={item.icon}
+                        alt={item.name}
+                        className="h-6 w-6"
+                      />
+                      <p className="text-medium-medium">{item.name}</p>
+                    </div>
+                    <div className="h-[1px] w-full bg-[#cccccc]"></div>
+                    <div className="flex flex-col gap-2 px-6 pt-4 pb-6">
+                      <p className="text-regular-medium">{item.contactInfo}</p>
+                      <p className="text-small-light">{item.text}</p>
+                    </div>
+                  </div>
+                </Link>
               </div>
             ))}
-            <div>
-              <div></div>
-            </div>
           </div>
         </div>
       </DrawerContent>

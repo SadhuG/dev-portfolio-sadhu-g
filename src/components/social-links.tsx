@@ -16,6 +16,8 @@ const SocialLinks = () => {
         <Link
           key={index}
           href={item.href}
+          target="_blank"
+          rel="noopener noreferrer"
           className="opacity-80 transition-opacity duration-150 hover:opacity-100"
         >
           <Image src={item.icon} alt={item.text} />

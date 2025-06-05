@@ -18,7 +18,7 @@ const CopyMailButton = () => {
         <Copy />
         hello@sadhug.in
       </Button>
-      {/* Toaster for notifications */}{" "}
+      {/* Toaster for notifications */}
       <div className="mx-auto h-0 w-0">
         <Toaster
           position="bottom-center"

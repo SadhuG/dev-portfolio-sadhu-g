@@ -88,7 +88,12 @@ const Projects = () => {
                     </CardTitle>
 
                     <CardAction className="flex flex-row-reverse gap-4 sm:flex-row">
-                      <Link href={project.githubLink} className="group">
+                      <Link
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group"
+                      >
                         <Button variant={"tertiary"} size={"icon"}>
                           <Image
                             src={githubLogoOutline}
@@ -100,7 +105,11 @@ const Projects = () => {
                           <span className="hidden">github</span>
                         </Button>
                       </Link>
-                      <Link href={project.liveLink}>
+                      <Link
+                        href={project.liveLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Button variant={"outlineSecondary"} className="gap-3">
                           Check it out
                           <div className="size-4">
@@ -110,6 +119,7 @@ const Projects = () => {
                       </Link>
                     </CardAction>
                   </CardHeader>
+
                   <CardContent className="text-regular-normal mt-3 w-full">
                     <p>{project.description}</p>
                     <ul className="mt-3 space-y-2">
@@ -123,6 +133,7 @@ const Projects = () => {
                       ))}
                     </ul>
                   </CardContent>
+
                   <CardFooter className="mt-4 flex-col items-start gap-2">
                     <div className="flex flex-wrap gap-2">
                       {project.skills.map((skill, index) => (
