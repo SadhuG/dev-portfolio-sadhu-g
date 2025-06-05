@@ -10,7 +10,7 @@ const SocialLinks = () => {
     {
       text: "Linkedin",
       icon: linkedinLogo,
-      href: "www.linkedin.com/in/sudhu-g",
+      href: "https://www.linkedin.com/in/sudhu-g/",
     },
     { text: "GitHub", icon: githubLogo, href: "https://github.com/SadhuG" },
   ];
