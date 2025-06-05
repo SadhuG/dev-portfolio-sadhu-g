@@ -5,7 +5,7 @@ import SocialLinks from "./social-links";
 
 const About = () => {
   return (
-    <section>
+    <section id="about">
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 xl:grid-cols-[1fr_450px] xl:gap-20">
         <div className="h-full">
           <p className="tagline mb-4">About me</p>

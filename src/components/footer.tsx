@@ -8,9 +8,9 @@ import { Button } from "./ui/button";
 
 const Footer = () => {
   const footerMenu = [
-    { text: "Mission", href: "#" },
-    { text: "Works", href: "#" },
-    { text: "About", href: "#" },
+    { text: "Mission", href: "#mission" },
+    { text: "Works", href: "#projects" },
+    { text: "About", href: "#about" },
   ];
 
   return (
@@ -48,10 +48,12 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <Button variant={"outlineSecondary"} size={"sm"}>
-            Back to top
-            <CircleArrowUp />
-          </Button>
+          <Link href={"#navbar"}>
+            <Button variant={"outlineSecondary"} size={"sm"}>
+              Back to top
+              <CircleArrowUp />
+            </Button>
+          </Link>
         </div>
       </div>
     </footer>

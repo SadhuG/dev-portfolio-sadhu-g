@@ -12,10 +12,10 @@ type Props = {
 };
 
 const navMenu = [
-  { text: "Mission", href: "#" },
-  { text: "Works", href: "#" },
-  { text: "About", href: "#" },
-  { text: "Contact", href: "#" },
+  { text: "Mission", href: "#mission" },
+  { text: "Works", href: "#projects" },
+  { text: "About", href: "#about" },
+  { text: "Contact", href: "#contact" },
 ];
 
 const NavMenu = ({ isOpen, onClose }: Props) => {
@@ -29,7 +29,7 @@ const NavMenu = ({ isOpen, onClose }: Props) => {
         <div className="flex h-full w-full items-center justify-end">
           <ul className="flex flex-col items-end gap-4">
             {navMenu.map((item, index) => (
-              <Link key={index} href={item.href}>
+              <Link key={index} href={item.href} onClick={onClose}>
                 <li className="text-4xl font-medium">{item.text}</li>
               </Link>
             ))}

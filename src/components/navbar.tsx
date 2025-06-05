@@ -8,13 +8,16 @@ import { Button } from "./ui/button";
 
 const Navbar = () => {
   const navMenu = [
-    { text: "Mission", href: "#" },
-    { text: "Works", href: "#" },
-    { text: "About", href: "#" },
+    { text: "Mission", href: "#mission" },
+    { text: "Works", href: "#projects" },
+    { text: "About", href: "#about" },
   ];
 
   return (
-    <nav className="flex h-[72px] items-center-safe justify-center-safe pr-3 pl-5 sm:px-12 lg:px-14 xl:px-16">
+    <nav
+      id="navbar"
+      className="flex h-[72px] items-center-safe justify-center-safe pr-3 pl-5 sm:px-12 lg:px-14 xl:px-16"
+    >
       <div className="flex w-full items-center justify-between">
         <div className="z-60">
           <Image src={logo} alt={"logo"} />

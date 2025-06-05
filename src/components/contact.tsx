@@ -5,7 +5,7 @@ import CtaWrapper from "./cta-wrapper";
 
 const Contact = () => {
   return (
-    <section>
+    <section id="contact">
       <div className="flex flex-col gap-12 xl:flex-row xl:justify-between xl:gap-20">
         <div>
           <p className="tagline mb-4">connect</p>

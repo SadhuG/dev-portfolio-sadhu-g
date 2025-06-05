@@ -50,7 +50,7 @@ const Projects = () => {
   ];
 
   return (
-    <section>
+    <section id="projects">
       <div className="mx-auto w-full max-w-5xl lg:text-center">
         <p className="tagline mb-3 sm:mb-4">Curated Projects</p>
         <h2>

@@ -35,7 +35,7 @@ const Mission = () => {
   ];
 
   return (
-    <section>
+    <section id="mission">
       <div className="mx-auto w-full max-w-5xl lg:text-center">
         <p className="tagline mb-3 sm:mb-4">Mission</p>
         <h2>

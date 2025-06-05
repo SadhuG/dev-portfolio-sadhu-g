@@ -6,9 +6,13 @@ import Link from "next/link";
 
 const SocialLinks = () => {
   const socialLinks = [
-    { text: "X (twitter)", icon: xLogo, href: "#" },
-    { text: "Linkedin", icon: linkedinLogo, href: "#" },
-    { text: "GitHub", icon: githubLogo, href: "#" },
+    { text: "X (twitter)", icon: xLogo, href: "https://x.com/iamsudhug" },
+    {
+      text: "Linkedin",
+      icon: linkedinLogo,
+      href: "www.linkedin.com/in/sudhu-g",
+    },
+    { text: "GitHub", icon: githubLogo, href: "https://github.com/SadhuG" },
   ];
   return (
     <div className="flex gap-4">
