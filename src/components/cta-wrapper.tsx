@@ -1,6 +1,6 @@
 import mailSend from "@/assets/icons/mail-send.svg";
 import xLogo from "@/assets/icons/x-logo.svg";
-import { ArrowUpRight, Copy } from "lucide-react";
+import { ArrowUpRight} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";

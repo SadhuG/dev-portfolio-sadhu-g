@@ -83,7 +83,7 @@ const NavMenu = ({ isOpen, onClose }: Props) => {
           aria-label="Contact information"
         >
           <span className="text-large-light" id="contact-label">
-            Let's Chat!
+            Let&apos;s Chat!
           </span>
           <Link
             href={"mailto:hello@sadhug.in"}

@@ -15,23 +15,23 @@ const About = () => {
           About me
         </p>
 
-          <h2>
-            Frontend Developer into{" "}
-            <span className="font-accent">everything</span>
-          </h2>
+        <h2>
+          Frontend Developer into{" "}
+          <span className="font-accent">everything</span>
+        </h2>
 
         <div className="text-medium-normal mt-6">
           <p>
-            I'm Sudhansh a tinkerer turned builder. Currently building frontend
-            (secretly full-stack) experiences that are a treat to use. I enjoy
-            turning complex ideas into clean, lovely interfaces making web
-            easier to use.
+            I&apos;m Sudhansh a tinkerer turned builder. Currently building
+            frontend (secretly full-stack) experiences that are a treat to use.
+            I enjoy turning complex ideas into clean, lovely interfaces making
+            web easier to use.
           </p>
           <p className="mt-6">
             Building from scratch or redefining existing products, I focus on
             crafting experiences your users remember, paying attention to
             detail, staying in-sync with modern tools. I believe great design
-            and engineering go hand-in-hand. I'm always excited to learn
+            and engineering go hand-in-hand. I&apos;m always excited to learn
             something new and solving problems along the way.
           </p>
         </div>

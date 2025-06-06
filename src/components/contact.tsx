@@ -16,7 +16,7 @@ const Contact = () => {
         </p>
         <h2>
           Have a Vision?{" "}
-          <span className="font-accent">Let's make it happen</span>
+          <span className="font-accent">Let&apos;s make it happen</span>
         </h2>
         <p className="text-large-light mt-4">
           Big or small, every great idea starts with a conversation.
