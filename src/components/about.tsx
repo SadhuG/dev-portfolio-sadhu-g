@@ -15,7 +15,7 @@ const About = () => {
             <span className="font-accent">everything</span>
           </h2>
 
-          <p className="text-regular-normal mt-6">
+          <p className="text-medium-normal mt-6">
             I'm Sudhansh a tinkerer turned builder. Currently building frontend
             (secretly full-stack) experiences that are a treat to use. I enjoy
             turning complex ideas into clean, lovely interfaces making web
@@ -34,7 +34,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="mx-auto flex h-full w-full flex-col">
+        <div className="mx-auto flex h-full w-full flex-col gap-1">
           <div className="h-full max-h-[480px] w-full max-w-[450px] flex-1">
             <Image
               src={devImage}
