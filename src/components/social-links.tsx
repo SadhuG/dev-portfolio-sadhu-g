@@ -15,19 +15,29 @@ const SocialLinks = () => {
     { text: "GitHub", icon: githubLogo, href: "https://github.com/SadhuG" },
   ];
   return (
-    <div className="flex gap-4">
-      {socialLinks.map((item, index) => (
-        <Link
-          key={index}
-          href={item.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="opacity-80 transition-opacity duration-150 hover:opacity-100"
-        >
-          <Image src={item.icon} alt={item.text} />
-          <span className="hidden">{item.text}</span>
-        </Link>
-      ))}
+    <div aria-label="Social media links">
+      <ul className="flex gap-4" role="list">
+        {socialLinks.map((item, index) => (
+          <li key={index} role="listitem">
+            <Link
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="opacity-80 transition-opacity duration-150 hover:opacity-100"
+              aria-label={`Visit my ${item.text} profile`}
+            >
+              <Image
+                src={item.icon}
+                alt=""
+                aria-hidden="true"
+                width={24}
+                height={24}
+              />
+              <span className="sr-only">{item.text}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

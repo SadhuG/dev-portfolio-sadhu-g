@@ -35,19 +35,25 @@ const Mission = () => {
   ];
 
   return (
-    <section id="mission">
+    <section id="mission" aria-label="Mission and Services">
       <div className="mx-auto w-full max-w-5xl lg:text-center">
-        <p className="tagline mb-3 sm:mb-4">Mission</p>
+        <p className="tagline mb-3 sm:mb-4" aria-hidden="true">
+          Mission
+        </p>
         <h2>
           Crafting Experiences that feel
           <br />
-          <span className="font-accent">effortless to use </span>
+          <span className="font-accent">effortless to use</span>
         </h2>
         <p className="text-medium-normal mt-4 sm:mt-6">
-          Making the web more beautiful, one website at a time.{" "}
+          Making the web beautiful, one website at a time.
         </p>
       </div>
-      <div className="mt-6 flex flex-col gap-4 sm:mt-14 sm:gap-8 lg:flex-row lg:flex-wrap lg:justify-around lg:gap-12 xl:flex-nowrap xl:justify-between">
+      <div
+        className="mt-6 flex flex-col gap-4 sm:mt-14 sm:gap-8 lg:flex-row lg:flex-wrap lg:justify-around lg:gap-12 xl:flex-nowrap xl:justify-between"
+        role="region"
+        aria-label="Services offered"
+      >
         {missionCards.map((card, index) => (
           <Card
             key={index}
@@ -57,11 +63,19 @@ const Mission = () => {
               <h3>{card.title}</h3>
             </CardTitle>
             <CardContent>
-              <ul className="space-y-2 sm:space-y-4">
+              <ul
+                className="space-y-2 sm:space-y-4"
+                aria-label={`List of ${card.title.toLowerCase()}`}
+              >
                 {card.points.map((point, index) => (
                   <li key={index}>
                     <div className="text-regular-normal inline-flex gap-4">
-                      <Image src={card.icon} alt={"list icon"} />
+                      <Image
+                        src={card.icon}
+                        alt=""
+                        aria-hidden="true"
+                        role="presentation"
+                      />
                       {point}
                     </div>
                   </li>

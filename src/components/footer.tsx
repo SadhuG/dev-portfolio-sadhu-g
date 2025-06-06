@@ -14,31 +14,44 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="px-5 py-12 sm:p-16 lg:px-16 lg:py-20">
+    <footer
+      className="px-5 py-12 sm:p-16 lg:px-16 lg:py-20"
+      aria-label="Footer"
+    >
       <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-start lg:justify-between">
         <div className="order-last lg:order-none">
-          <span className="text-lg">© Sudhansh Singh 2025.</span>
+          <p className="text-lg">© Sudhansh Singh 2025.</p>
         </div>
-        <div className="flex flex-col items-center lg:w-28 lg:items-end xl:w-56">
+        <nav
+          className="flex flex-col items-center lg:w-28 lg:items-end xl:w-56"
+          aria-label="Footer navigation"
+        >
           {footerMenu.map((item, index) => (
             <Link
               key={index}
               href={item.href}
               className="text-base/[160%] font-semibold"
+              aria-label={`Go to ${item.text} section`}
             >
               {item.text}
             </Link>
           ))}
-        </div>
+        </nav>
         <div className="space-y-2">
           <div>
             <Link
               href={"mailto:hello@sadhug.in"}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Send email to hello@sadhug.in"
             >
               <Button size={"tertiary"} variant={"tertiary"}>
-                <Image src={mailSend} alt={"mail send icon"} />
+                <Image
+                  src={mailSend}
+                  alt=""
+                  aria-hidden="true"
+                  className="h-6 w-6"
+                />
                 hello@sadhug.in
               </Button>
             </Link>
@@ -48,10 +61,13 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <Link href={"#navbar"}>
+          <Link
+            href={"#navbar"}
+            aria-label="Scroll back to top of page"
+          >
             <Button variant={"outlineSecondary"} size={"sm"}>
               Back to top
-              <CircleArrowUp />
+              <CircleArrowUp aria-hidden="true" />
             </Button>
           </Link>
         </div>

@@ -14,8 +14,13 @@ const CopyMailButton = () => {
 
   return (
     <>
-      <Button variant={"tertiary"} size={"tertiary"} onClick={handleCopy}>
-        <Copy />
+      <Button
+        variant={"tertiary"}
+        size={"tertiary"}
+        onClick={handleCopy}
+        aria-label="Click to copy email address hello@sadhug.in to clipboard"
+      >
+        <Copy aria-hidden="true" />
         hello@sadhug.in
       </Button>
       {/* Toaster for notifications */}

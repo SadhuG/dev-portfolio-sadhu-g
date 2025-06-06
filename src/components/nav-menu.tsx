@@ -3,7 +3,7 @@
 import mailSend from "@/assets/icons/mail-send.svg";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "./ui/button";
 
 type Props = {
@@ -19,32 +19,86 @@ const navMenu = [
 ];
 
 const NavMenu = ({ isOpen, onClose }: Props) => {
+  // Handle ESC key to close menu
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && isOpen) {
+        onClose();
+      }
+    };
+
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [isOpen, onClose]);
+
+  // Prevent scrolling when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
   return (
     <div
+      role="dialog"
+      aria-label="Navigation Menu"
+      aria-modal="true"
       className={`fixed inset-0 z-40 h-screen transform ${
         isOpen ? "w-screen -translate-x-0" : "translate-x-full"
       } bg-background transition-transform duration-500 ease-out`}
     >
       <div className="flex h-full w-full flex-col items-center justify-center space-y-4 px-5 py-16">
-        <div className="flex h-full w-full items-center justify-end">
-          <ul className="flex flex-col items-end gap-4">
+        <nav
+          className="flex h-full w-full items-center justify-end"
+          aria-label="Main navigation"
+        >
+          <ul
+            className="flex flex-col items-end gap-4"
+            role="menubar"
+            aria-label="Navigation links"
+          >
             {navMenu.map((item, index) => (
-              <Link key={index} href={item.href} onClick={onClose}>
-                <li className="text-4xl font-medium">{item.text}</li>
-              </Link>
+              <li key={index} role="none" className="text-4xl font-medium">
+                <Link
+                  href={item.href}
+                  onClick={onClose}
+                  role="menuitem"
+                  className="block w-full"
+                  aria-label={`Go to ${item.text} section`}
+                >
+                  {item.text}
+                </Link>
+              </li>
             ))}
           </ul>
-        </div>
+        </nav>
 
-        <div className="flex w-full flex-col items-end">
-          <span className="text-large-light">Let’s Chat!</span>
+        <div
+          className="flex w-full flex-col items-end"
+          aria-label="Contact information"
+        >
+          <span className="text-large-light" id="contact-label">
+            Let's Chat!
+          </span>
           <Link
             href={"mailto:hello@sadhug.in"}
             target="_blank"
             rel="noopener noreferrer"
+            aria-labelledby="contact-label"
           >
             <Button size={"tertiary"} variant={"tertiary"}>
-              <Image src={mailSend} alt={"mail send icon"} />
+              <Image
+                src={mailSend}
+                alt=""
+                aria-hidden="true"
+                role="presentation"
+                className="h-6 w-6"
+              />
               hello@sadhug.in
             </Button>
           </Link>
