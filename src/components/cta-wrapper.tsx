@@ -1,6 +1,6 @@
 import mailSend from "@/assets/icons/mail-send.svg";
 import xLogo from "@/assets/icons/x-logo.svg";
-import { ArrowUpRight} from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -46,7 +46,7 @@ const CtaWrapper = () => {
               aria-label="Open contact options drawer"
             >
               <span className="group-hover:text-background relative z-10 transition-colors duration-500 ease-in-out">
-                Contact me
+                Lets build together
               </span>
               <div className="bg-foreground relative z-10 size-4 rounded-full">
                 <ArrowUpRight className="text-background" aria-hidden="true" />
