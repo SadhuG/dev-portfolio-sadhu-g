@@ -33,7 +33,7 @@ const Navbar = () => {
             <div key={index} role="listitem">
               <Link
                 href={item.href}
-                className="hover:underline focus:outline-none focus:ring-2 focus:ring-foreground"
+                className="transition-all duration-900 hover:underline hover:underline-offset-4"
                 aria-label={`Go to ${item.text} section`}
               >
                 {item.text}

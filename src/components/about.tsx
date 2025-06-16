@@ -41,17 +41,18 @@ const About = () => {
         </div>
       </div>
 
-      <div className="mx-auto flex h-full w-full flex-col gap-1">
-        <div className="h-full max-h-[480px] w-full max-w-[450px] flex-1">
-          <Image
-            src={devImage}
-            alt="Stylized portrait of Sudhansh in Ghibli art style"
-            className="h-auto w-full rounded-3xl object-cover"
-          />
-        </div>
-
-        <div className="px-6">
-          <p aria-hidden="true">Hi, this is me but ghibli</p>
+      <div className="mx-auto flex h-full w-full flex-col justify-center gap-1">
+        <div className="flex w-full flex-col items-end">
+          <div className="h-full max-h-[480px] w-full max-w-[450px] flex-1">
+            <Image
+              src={devImage}
+              alt="Stylized portrait of Sudhansh in Ghibli art style"
+              className="h-auto w-full rounded-3xl object-cover"
+            />
+          </div>
+          <div className="px-6">
+            <p aria-hidden="true">Hi, this is me but ghibli</p>
+          </div>
         </div>
       </div>
     </section>

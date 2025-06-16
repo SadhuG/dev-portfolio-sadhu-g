@@ -73,7 +73,7 @@ const CtaWrapper = () => {
           <DrawerHeader className="items-center gap-2">
             <DrawerTitle>
               <h2 className="text-xl leading-[120%] font-medium tracking-[1px] sm:text-[32px]">
-                Connect with me
+                Let's build Amazing
               </h2>
             </DrawerTitle>
 
