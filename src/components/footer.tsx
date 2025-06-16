@@ -1,4 +1,5 @@
 import mailSend from "@/assets/icons/mail-send.svg";
+import { Email } from "@/info/contact-links";
 import { CircleArrowUp } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -52,7 +53,7 @@ const Footer = () => {
                   aria-hidden="true"
                   className="h-6 w-6"
                 />
-                hello@sadhug.in
+                {Email}
               </Button>
             </Link>
           </div>
@@ -61,10 +62,7 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <Link
-            href={"#navbar"}
-            aria-label="Scroll back to top of page"
-          >
+          <Link href={"#navbar"} aria-label="Scroll back to top of page">
             <Button variant={"outlineSecondary"} size={"sm"}>
               Back to top
               <CircleArrowUp aria-hidden="true" />

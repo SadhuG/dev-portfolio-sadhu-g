@@ -1,5 +1,6 @@
 import mailSend from "@/assets/icons/mail-send.svg";
 import logo from "@/assets/logo.png";
+import { Email } from "@/info/contact-links";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -56,7 +57,7 @@ const Navbar = () => {
                 role="presentation"
                 className="h-6 w-6"
               />
-              hello@sadhug.in
+              {Email}
             </Button>
           </Link>
         </div>

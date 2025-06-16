@@ -1,5 +1,6 @@
 import mailSend from "@/assets/icons/mail-send.svg";
 import xLogo from "@/assets/icons/x-logo.svg";
+import { ContactLinks, Email } from "@/info/contact-links";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,16 +21,16 @@ const CtaWrapper = () => {
     {
       name: "Email",
       icon: mailSend,
-      link: "mailto:hello@sadhug.in",
-      contactInfo: "hello@sadhug.in",
+      link: `mailto:${Email}`,
+      contactInfo: Email,
       text: "Send me an email directly",
       bg: "bg-linear-to-r from-[#DB94EB]/50 to-[#000000]",
     },
     {
-      name: "X (Twitter)",
-      icon: xLogo,
-      link: "https://x.com/iamsudhug",
-      contactInfo: "@iamsudhug",
+      name: ContactLinks.x.name,
+      icon: ContactLinks.x.icon,
+      link: ContactLinks.x.link,
+      contactInfo: ContactLinks.x.contactInfo,
       text: "Let's have a conversation",
       bg: "bg-linear-to-r from-[#A1C3FA]/50 to-[#000000]",
     },
