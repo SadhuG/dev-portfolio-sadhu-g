@@ -50,7 +50,7 @@ const About = () => {
               className="h-auto w-full rounded-3xl object-cover"
             />
           </div>
-          <div className="px-6">
+          <div className="mt-1 w-full px-6">
             <p aria-hidden="true">Hi, this is me but ghibli</p>
           </div>
         </div>
