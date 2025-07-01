@@ -1,5 +1,4 @@
 import mailSend from "@/assets/icons/mail-send.svg";
-import xLogo from "@/assets/icons/x-logo.svg";
 import { ContactLinks, Email } from "@/info/contact-links";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
@@ -74,7 +73,7 @@ const CtaWrapper = () => {
           <DrawerHeader className="items-center gap-2">
             <DrawerTitle>
               <h2 className="text-xl leading-[120%] font-medium tracking-[1px] sm:text-[32px]">
-                Let's build Amazing
+                Let&aposs build Amazing
               </h2>
             </DrawerTitle>
 
