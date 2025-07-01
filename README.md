@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sadhu G - Frontend Developer Portfolio
 
-## Getting Started
+Welcome to my portfolio! I'm Sudhansh a frontend developer passionate about creating beautiful, accessible, and high-performance web experiences. I specialize in turning complex ideas into clean, user-friendly interfaces.
 
-First, run the development server:
+## 🎯 What I Deliver
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **User-Centric Design**: Creating experiences that users love and remember
+- **Performance-First**: Building blazing-fast websites that load instantly
+- **Accessibility**: Ensuring websites are usable by everyone
+- **Modern Tech Stack**: Leveraging cutting-edge technologies for the best results
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💻 Technical Expertise
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend Development**: React.js, Next.js, TypeScript
+- **UI/UX Design**: Responsive layouts, modern design patterns
+- **Performance**: SEO optimization, Core Web Vitals
+- **Tools**: Figma, Framer, Webflow
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Recent Projects
 
-## Learn More
+My portfolio showcases a selection of projects that demonstrate my ability to:
 
-To learn more about Next.js, take a look at the following resources:
+- Create engaging user interfaces
+- Build scalable web applications
+- Implement responsive designs
+- Optimize for performance
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌟 Why Work With Me
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Focus on Quality**: Attention to detail in every pixel
+- **Modern Solutions**: Up-to-date with latest web technologies
+- **Communication**: Clear and consistent project updates
+- **Timely Delivery**: Strong project management skills
 
-## Deploy on Vercel
+## 📫 Get in Touch
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Looking for a frontend developer who can bring your vision to life? Let's connect!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Portfolio: [sadhug.in](https://sadhug.in)
+- Email: hello@sadhug.in
+- LinkedIn: [Sudhansh](https://www.linkedin.com/in/sudhu-g/)
+- GitHub: [SadhuG](https://github.com/SadhuG)
+
+---
+
+## Tech Stack
+
+Built with:
+
+- [Next.js](https://nextjs.org) - React framework for production
+- TypeScript - For type safety
+- Tailwind CSS - For styling
+- Framer Motion - For animations
+- Shadcn/ui - For UI components
