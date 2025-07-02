@@ -94,8 +94,8 @@ const Projects = () => {
         "Built to convert — guiding visitors to contact or hire easily.",
       ],
       image: devPortfolio,
-      githubLink: "#",
-      liveLink: "#",
+      githubLink: "https://github.com/SadhuG/dev-portfolio-sadhu-g",
+      liveLink: "https://sadhug.in/",
       skills: [
         { icon: Pen, name: "Branding" },
         { icon: PencilRuler, name: "Design" },
