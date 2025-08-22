@@ -26,13 +26,40 @@ import TypeScript from "@/assets/icons/typescript.svg";
 import Vercel from "@/assets/icons/vercel_dark.svg";
 import Zod from "@/assets/icons/zod.svg";
 import octorealPage from "@/assets/octoreal-landing-page.png";
-import devPortfolio from "@/assets/sadhug-dev-portfolio.png";
 import vdsPage from "@/assets/vds-landing-page.png";
+import workNestPage from "@/assets/worknest-header.png";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
 const Projects = () => {
   const projectsDisplayed = [
+    {
+      title: "WorkNest",
+      color: `#51e9fc`,
+      description:
+        "WorkNest is a B2B SaaS platform that helps remote teams automate workflows, streamline collaboration, and scale operations effortlessly — all without technical complexity.",
+      keyPoints: [
+        "Designed a conversion-optimized landing page targeting HR, Ops, and CTO decision-makers.",
+        "Crafted a clear value proposition with benefit-driven copy and modular grid layout.",
+        "Built 'How It Works' onboarding section with 3-step flow for clarity.",
+        "Highlighted key integrations (Slack, Asana, Google Drive) to build trust and relevance.",
+        "Incorporated social proof with testimonials and integration badges to boost conversions.",
+      ],
+      image: workNestPage,
+      githubLink: "https://github.com/SadhuG/work-nest-landing-page",
+      liveLink: "https://work-nest-landing-page.vercel.app/",
+      skills: [
+        { icon: Pen, name: "Branding" },
+        { icon: PencilRuler, name: "Design" },
+        { icon: Development, name: "Development" },
+      ],
+      techStack: [
+        { icon: Figma, name: "Figma" },
+        { icon: NextJs, name: "Next.js" },
+        { icon: TypeScript, name: "Typescript" },
+        { icon: Vercel, name: "Vercel" },
+      ],
+    },
     {
       title: "Octoreal",
       color: `#e200ff`,
@@ -80,32 +107,6 @@ const Projects = () => {
       techStack: [
         { icon: Figma, name: "Figma" },
         { icon: Framer, name: "Framer" },
-      ],
-    },
-    {
-      title: "Developer Portfolio",
-      color: `#51e9fc`,
-      description:
-        "Frontend developer crafting sleek, user-focused websites with modern tech. My landing page blends design and code to showcase projects, attract clients, and build trust instantly.",
-      keyPoints: [
-        "Clean, modern design that reflects professionalism and trust.",
-        "Mobile-friendly layout that works perfectly on all devices.",
-        "Showcases my best work to help you decide fast.",
-        "Built to convert — guiding visitors to contact or hire easily.",
-      ],
-      image: devPortfolio,
-      githubLink: "https://github.com/SadhuG/dev-portfolio-sadhu-g",
-      liveLink: "https://sadhug.in/",
-      skills: [
-        { icon: Pen, name: "Branding" },
-        { icon: PencilRuler, name: "Design" },
-        { icon: Development, name: "Development" },
-      ],
-      techStack: [
-        { icon: Figma, name: "Figma" },
-        { icon: NextJs, name: "Next.js" },
-        { icon: TypeScript, name: "Typescript" },
-        { icon: Vercel, name: "Vercel" },
       ],
     },
   ];
