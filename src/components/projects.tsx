@@ -6,33 +6,51 @@ import {
   Card,
   CardAction,
   CardContent,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "./ui/card";
-import { Tag, TagContent, TagIcon, TagName } from "./ui/tag";
 
 // image import
-import Development from "@/assets/icons/development.svg";
-import Figma from "@/assets/icons/figma.svg";
-import Formspree from "@/assets/icons/formspree.png";
-import Framer from "@/assets/icons/framer_dark.svg";
-import githubLogoOutline from "@/assets/icons/github-outline-logo.svg";
-import NextJs from "@/assets/icons/nextjs_icon_dark.svg";
-import Pen from "@/assets/icons/pen.svg";
-import PencilRuler from "@/assets/icons/pencil-ruler.svg";
-import ThreeJs from "@/assets/icons/threejs-dark.svg";
-import TypeScript from "@/assets/icons/typescript.svg";
-import Vercel from "@/assets/icons/vercel_dark.svg";
-import Zod from "@/assets/icons/zod.svg";
-import octorealPage from "@/assets/octoreal-landing-page.png";
-import vdsPage from "@/assets/vds-landing-page.png";
-import workNestPage from "@/assets/worknest-header.png";
+import githubLogoOutline from "@/assets/github-outline-logo.svg";
+import OmJewellersPage from "@/assets/om-jewellers-header.jpg";
+import TatvaPage from "@/assets/tatva-header.jpg";
+import WorkNestPage from "@/assets/worknest-header.png";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
 const Projects = () => {
   const projectsDisplayed = [
+    {
+      title: "Tatva Creative",
+      color: `#D5DADD`,
+      description:
+        "Transformed Tatva Digital, a high-end agency, with a brand-led website redesign. Focused on 'First Principles' and a 'Made in India for the World' ethos, delivering a sophisticated digital presence.",
+      keyPoints: [
+        "Developed unique brand identity and translated it into a premium website aesthetic.",
+        "Crafted intuitive UX/UI, detailed wireframes, and conversion-optimized content.",
+        "Defined a sophisticated visual language (colors, typography, AI image prompts) for a global audience.",
+        "Showcased strategic expertise through bespoke case studies and thought leadership.",
+      ],
+      image: TatvaPage,
+      githubLink: "https://github.com/SadhuG/tatva-creative-studio",
+      liveLink: "https://tatva-creative-studio.vercel.app/",
+    },
+    {
+      title: "Om Jewellers",
+      color: "#99804C",
+      description:
+        "Om Jewellers is a premium jewelry brand website celebrating 23 years of timeless craftsmanship, trust, and elegance. The project highlights their diverse collections, customer-centric philosophy, and strong local presence, blending tradition with modern digital engagement.",
+
+      keyPoints: [
+        "Designed a brand-focused landing page showcasing 10+ jewelry categories including rings, earrings, and mangalsutras.",
+        "Integrated customer engagement features like WhatsApp subscription for exclusive offers.",
+        "Optimized layout for responsiveness and accessibility to enhance user experience.",
+        "Developed contact and showroom details to drive offline conversions and local trust.",
+      ],
+
+      image: OmJewellersPage,
+      liveLink: "https://www.omjewellersjdp.com/",
+    },
     {
       title: "WorkNest",
       color: `#51e9fc`,
@@ -45,69 +63,9 @@ const Projects = () => {
         "Highlighted key integrations (Slack, Asana, Google Drive) to build trust and relevance.",
         "Incorporated social proof with testimonials and integration badges to boost conversions.",
       ],
-      image: workNestPage,
+      image: WorkNestPage,
       githubLink: "https://github.com/SadhuG/work-nest-landing-page",
       liveLink: "https://work-nest-landing-page.vercel.app/",
-      skills: [
-        { icon: Pen, name: "Branding" },
-        { icon: PencilRuler, name: "Design" },
-        { icon: Development, name: "Development" },
-      ],
-      techStack: [
-        { icon: Figma, name: "Figma" },
-        { icon: NextJs, name: "Next.js" },
-        { icon: TypeScript, name: "Typescript" },
-        { icon: Vercel, name: "Vercel" },
-      ],
-    },
-    {
-      title: "Octoreal",
-      color: `#e200ff`,
-      description:
-        "Octoreal is a bold design and development agency crafting high-performance, visually striking websites that captivate users, reflect brands, and drive real business results.",
-      keyPoints: [
-        "Designed and built a high-impact landing page for a creative agency.",
-        "Developed a clear brand story with custom visuals and bold typography.",
-        "Implemented a interactive header background using three.js.",
-      ],
-      image: octorealPage,
-      githubLink: null,
-      liveLink: "https://octoreal.com/",
-      skills: [
-        { icon: PencilRuler, name: "Design" },
-        { icon: Development, name: "Development" },
-      ],
-      techStack: [
-        { icon: Figma, name: "Figma" },
-        { icon: NextJs, name: "Next.js" },
-        { icon: TypeScript, name: "Typescript" },
-        { icon: ThreeJs, name: "Three.js" },
-        { icon: Zod, name: "Zod" },
-        { icon: Formspree, name: "Formspree" },
-      ],
-    },
-    {
-      title: "Vanshita Design Studio",
-      color: `#00d5be`,
-      description:
-        "Vanshita Design Studio is a boutique interior design brand with a refined, minimalist landing page showcasing curated projects, services, and a personalized client inquiry experience.",
-      keyPoints: [
-        "Elegant, modern website for a luxury interior design studio.",
-        "Developed using Framer it's built on no-code platform for easy updates.",
-        "Clean and minimal design that showcases projects, services, and brand personality clearly.",
-      ],
-      image: vdsPage,
-      githubLink: null,
-      liveLink: "https://vds.framer.website/",
-      skills: [
-        { icon: Pen, name: "Branding" },
-        { icon: PencilRuler, name: "Design" },
-        { icon: Development, name: "Development" },
-      ],
-      techStack: [
-        { icon: Figma, name: "Figma" },
-        { icon: Framer, name: "Framer" },
-      ],
     },
   ];
 
@@ -134,17 +92,17 @@ const Projects = () => {
             role="listitem"
           >
             <div className="bg-card h-full max-h-[500px] w-full max-w-[600px] rounded-4xl border p-2 max-xl:mx-auto">
-              <div className="flex h-full max-h-[234px] w-full items-end justify-center overflow-hidden rounded-3xl bg-linear-to-b from-gray-300 to-white px-6 pt-10 sm:max-h-[464px] sm:px-10 sm:pt-20 md:max-h-[484px]">
-                <div className="mt-10 max-h-[400px] max-w-[500px] overflow-hidden rounded-t-xl sm:mt-20">
-                  <Image
-                    src={project.image}
-                    alt={`Screenshot or preview of ${project.title}`}
-                    className="h-full w-full max-w-[500px]"
-                  />
-                </div>
+              <div className="max-h-[500px] max-w-[600px] overflow-hidden rounded-3xl">
+                <Image
+                  src={project.image}
+                  alt={`Screenshot or preview of ${project.title}`}
+                  quality={100}
+                  className="h-full w-full max-w-[600px]"
+                />
               </div>
             </div>
-            <div className="lg:flex lg:items-center">
+
+            <div className="mx-auto max-w-[616px] lg:flex lg:items-center">
               <div className="lg:flex lg:gap-2">
                 <div
                   className="hidden h-full w-5 py-[22px] lg:flex"
@@ -228,54 +186,6 @@ const Projects = () => {
                       ))}
                     </ul>
                   </CardContent>
-
-                  <CardFooter className="mt-4 flex-col items-start gap-2">
-                    <div
-                      className="flex flex-wrap gap-2"
-                      role="group"
-                      aria-label="Skills used"
-                    >
-                      {project.skills.map((skill, index) => (
-                        <Tag key={index}>
-                          <TagContent>
-                            <TagIcon className="hidden size-6 sm:block">
-                              <Image
-                                src={skill.icon}
-                                alt=""
-                                width={24}
-                                height={24}
-                                aria-hidden="true"
-                              />
-                            </TagIcon>
-                            <TagName>{skill.name}</TagName>
-                          </TagContent>
-                        </Tag>
-                      ))}
-                    </div>
-                    <div
-                      className="flex flex-wrap gap-2"
-                      role="group"
-                      aria-label="Technologies used"
-                    >
-                      {project.techStack.map((tech, index) => (
-                        <Tag key={index}>
-                          <TagContent>
-                            <TagIcon className="hidden size-6 h-6 items-center justify-center sm:flex">
-                              <Image
-                                src={tech.icon}
-                                alt=""
-                                width={24}
-                                height={24}
-                                aria-hidden="true"
-                                className="max-h-6 max-w-6"
-                              />
-                            </TagIcon>
-                            <TagName>{tech.name}</TagName>
-                          </TagContent>
-                        </Tag>
-                      ))}
-                    </div>
-                  </CardFooter>
                 </div>
               </div>
             </div>
